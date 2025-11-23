@@ -6,11 +6,11 @@ import { SignupPage } from './pages/SignupPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { ListPage } from './pages/ListPage';
 import { Layout } from './components/Layout';
-import { getStoredDialogues, saveDialogues, getStoredTheme, saveTheme } from './services/storageService';
+import { getStoredDialogues, saveDialogues, getStoredTheme, saveTheme, isUserLoggedIn, logoutUser } from './services/storageService';
 import { Dialogue } from './types';
 
 const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(isUserLoggedIn());
   const [darkMode, setDarkMode] = useState(false);
   const [dialogues, setDialogues] = useState<Dialogue[]>([]);
 
@@ -44,6 +44,7 @@ const App: React.FC = () => {
   };
 
   const handleLogout = () => {
+    logoutUser();
     setIsLoggedIn(false);
   };
 

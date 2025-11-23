@@ -39,13 +39,24 @@ export const saveTheme = (theme: 'light' | 'dark') => {
   localStorage.setItem(STORAGE_KEY_THEME, theme);
 };
 
-// User Authentication Services - Dummy Implementation for UI Dev
+const STORAGE_KEY_SESSION = 'dramalearn_session';
+
+// User Authentication Services
 export const registerUser = (email: string, password: string): boolean => {
   // Logic removed for backend integration later
   return true;
 };
 
 export const loginUser = (email: string, password: string): boolean => {
-  // Logic removed for backend integration later
+  // Simple session persistence
+  localStorage.setItem(STORAGE_KEY_SESSION, 'true');
   return true;
+};
+
+export const logoutUser = () => {
+  localStorage.removeItem(STORAGE_KEY_SESSION);
+};
+
+export const isUserLoggedIn = (): boolean => {
+  return localStorage.getItem(STORAGE_KEY_SESSION) === 'true';
 };
