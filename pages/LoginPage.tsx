@@ -113,6 +113,133 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
             </div>
           </div>
         </section>
+
+        {/* Features Section */}
+        <section className="py-24 bg-white dark:bg-background-dark relative overflow-hidden">
+          <div className="container mx-auto px-6 md:px-12 lg:px-24">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              
+              {/* Text Content */}
+              <div className="flex-1 space-y-8 z-10">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-medium text-sm mb-2">
+                  Smart Learning
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight font-display">
+                  드라마에 나오는 대사들을<br/>
+                  <span className="text-primary">가장 빠르고 정확하게.</span>
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  인상 깊었던 드라마 속 그 대사, 이젠 DramaLearn에서.<br/>
+                  DramaLearn은 당신이 좋아하는 대사를 기록하고,<br/>
+                  다른 사람이 기록한 대사를 통해서<br/>
+                  언제든 쉽게 공부할 수 있는 보물창고입니다.
+                </p>
+                
+                <div className="space-y-6 pt-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+                      <span className="material-symbols-outlined text-2xl">edit_note</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">간편한 배움</h3>
+                      <p className="text-gray-600 dark:text-gray-400">드라마 제목, 원문, 해석을 직관적인 UI로 빠르게 배워보세요.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                      <span className="material-symbols-outlined text-2xl">style</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">학습과 활용</h3>
+                      <p className="text-gray-600 dark:text-gray-400">학습한 내용을 회화 속에서 사용해보세요.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Content */}
+              <div className="flex-1 relative w-full max-w-xl lg:max-w-none">
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl opacity-50"></div>
+                
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                  {/* Browser Mockup Header */}
+                  <div className="bg-gray-100 dark:bg-gray-900 px-4 py-3 border-b border-gray-200 dark:border-gray-700 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                    <div className="ml-4 bg-white dark:bg-gray-800 rounded-md px-3 py-1 text-xs text-gray-400 flex-1 text-center font-mono">dramalearn.app/list</div>
+                  </div>
+                  {/* Feature Preview Image */}
+                  <div className="aspect-[4/3] bg-gray-50 dark:bg-gray-900 relative group">
+                    <img 
+                      src="/feature-preview.png" 
+                      alt="App Dashboard Preview" 
+                      className="w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                      <p className="text-white font-medium">나만의 대사 리스트를 만들어보세요</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        {/* Marquee Section */}
+        <section className="py-16 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark overflow-hidden">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white font-display">Learn with your favorite shows</h3>
+            <p className="text-gray-500 dark:text-gray-400 mt-2">다양한 미드와 영화로 영어를 마스터하세요</p>
+          </div>
+          
+          <div className="relative w-full flex overflow-hidden mask-linear-gradient">
+            <div className="flex animate-scroll hover:pause gap-6 px-3 min-w-full">
+              {[
+                { title: "Friends", color: "bg-orange-500" },
+                { title: "The Office", color: "bg-blue-500" },
+                { title: "Big Bang Theory", color: "bg-red-500" },
+                { title: "Young Sheldon", color: "bg-yellow-500" },
+                { title: "Brooklyn 99", color: "bg-indigo-500" },
+                { title: "HIMYM", color: "bg-purple-500" },
+                { title: "Modern Family", color: "bg-green-500" },
+                { title: "Sherlock", color: "bg-slate-600" },
+                { title: "Suits", color: "bg-gray-800" },
+                { title: "Stranger Things", color: "bg-red-800" },
+              ].map((show, i) => (
+                <div key={i} className="flex-shrink-0 w-48 h-72 rounded-xl overflow-hidden shadow-lg relative group cursor-pointer transform transition-transform hover:scale-105">
+                  <div className={`w-full h-full ${show.color} flex items-center justify-center p-4`}>
+                    <h4 className="text-white font-display font-bold text-xl text-center drop-shadow-md">{show.title}</h4>
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {[
+                { title: "Friends", color: "bg-orange-500" },
+                { title: "The Office", color: "bg-blue-500" },
+                { title: "Big Bang Theory", color: "bg-red-500" },
+                { title: "Young Sheldon", color: "bg-yellow-500" },
+                { title: "Brooklyn 99", color: "bg-indigo-500" },
+                { title: "HIMYM", color: "bg-purple-500" },
+                { title: "Modern Family", color: "bg-green-500" },
+                { title: "Sherlock", color: "bg-slate-600" },
+                { title: "Suits", color: "bg-gray-800" },
+                { title: "Stranger Things", color: "bg-red-800" },
+              ].map((show, i) => (
+                <div key={`dup-${i}`} className="flex-shrink-0 w-48 h-72 rounded-xl overflow-hidden shadow-lg relative group cursor-pointer transform transition-transform hover:scale-105">
+                  <div className={`w-full h-full ${show.color} flex items-center justify-center p-4`}>
+                    <h4 className="text-white font-display font-bold text-xl text-center drop-shadow-md">{show.title}</h4>
+                  </div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       
       <footer className="bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute bottom-0 w-full z-10">
