@@ -1,0 +1,5 @@
+{
+  "name": "DramaLearn",
+  "description": "A web application for learning English through drama dialogues, featuring authentication and dialogue management.",
+  "requestFramePermissions": []
+}
