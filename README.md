@@ -8,13 +8,33 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/1OpLOdi2AR88HquEleGQ3Xoozhnc87DGv
 
-## Run Locally
+## 🚀 How to Run
 
-**Prerequisites:**  Node.js
+### 1. Development (Recommended)
 
+Use this mode while coding. It supports hot-reloading.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm run dev
+```
+
+- Opens the app at `http://localhost:3000` (or similar).
+- Edits to `index.html` or `src` files appear instantly.
+
+### 2. Production Build
+
+Use this to create the final files for deployment.
+
+```bash
+npm run build
+```
+
+- Generates a `dist` folder.
+- **Do not edit files in `dist`**. They are auto-generated.
+- To preview the build: `npx vite preview`
+
+## 📂 Project Structure
+
+- `index.html`: **Main entry point**. Edit this file.
+- `src/`: Contains your React code (`.tsx`, `.ts`).
+- `dist/`: **Build output**. Contains optimized files for the web. **Ignore this folder**.

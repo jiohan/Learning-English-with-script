@@ -5,7 +5,7 @@ const STORAGE_KEY_THEME = 'dramalearn_theme';
 
 export const getStoredDialogues = (): Dialogue[] => {
   const stored = localStorage.getItem(STORAGE_KEY_DIALOGUES);
-  if (!stored) {
+  if (!stored || JSON.parse(stored).length === 0) {
     // Default initial data
     return [
       {

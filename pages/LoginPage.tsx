@@ -174,7 +174,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                   {/* Feature Preview Image */}
                   <div className="aspect-[4/3] bg-gray-50 dark:bg-gray-900 relative group">
                     <img 
-                      src="/feature-preview.png" 
+                      src="/webpic.png" 
                       alt="App Dashboard Preview" 
                       className="w-full h-full object-cover object-top"
                     />
